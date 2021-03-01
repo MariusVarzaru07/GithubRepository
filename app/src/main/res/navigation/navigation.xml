@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/overviewFragment2">
+
+    <fragment
+        android:id="@+id/overviewFragment2"
+        android:name="com.example.githubrepository.overview.OverviewFragment"
+        android:label="OverviewFragment" >
+        <action
+            android:id="@+id/action_overviewFragment2_to_repositoryDetailsFragment"
+            app:destination="@id/repositoryDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/repositoryDetailsFragment"
+        android:name="com.example.githubrepository.details.RepositoryDetailsFragment"
+        android:label="RepositoryDetailsFragment" >
+
+        <argument
+            android:name="parcelableDetails"
+            app:argType="com.example.githubrepository.network.RepositoryDetailsModel" />
+    </fragment>
+</navigation>
